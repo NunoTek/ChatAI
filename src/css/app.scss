@@ -1,0 +1,102 @@
+// app global css in SCSS form
+
+::-webkit-scrollbar {
+  width: 10px;
+
+  &:hover {
+    background: rgba($secondary, 0.2);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  z-index: 3;
+  background: rgba($secondary, 0.55);
+  border-radius: 6px;
+  height: 60px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.float-left {
+  position: absolute;
+  left: 0px;
+}
+
+.float-right {
+  position: absolute;
+  right: 0px;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: unset;
+
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.text-weight-thin {
+  font-weight: 200;
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    rgb(101, 121, 155) 0%,
+    rgb(94, 37, 99) 100%
+  ) !important;
+}
+
+/*
+  Quasar Framework v2.0.0
+  For more info, visit: https://quasar.dev/quasar-cli/cli-documentation/css-variables
+*/
+
+// .q-page-container {
+//   background: linear-gradient(rgb(101, 121, 155) 0%, rgb(94, 37, 99) 100%);
+// }
+
+.q-drawer,
+.q-footer {
+  // background: linear-gradient(rgb(48, 35, 174) 0%, rgb(200, 109, 215) 100%);
+  background: var(--q-color-primary);
+}
+
+// .q-card {
+//   background: linear-gradient(rgb(91, 36, 122) 0%, rgb(27, 206, 223) 100%);
+// }
+
+.q-card,
+.q-avatar {
+  border-radius: 12px !important;
+}
+
+.q-tab-panels {
+  background: inherit !important;
+}
+
+.q-tab-panel {
+  padding: 0px;
+}
+
+.q-message-text-content {
+  font-size: 15px;
+
+  i {
+    color: rgb(148, 171, 185);
+  }
+}
+
+.body--light {
+  .q-card {
+    background: rgb(237, 233, 245);
+  }
+}

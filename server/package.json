@@ -1,0 +1,34 @@
+{
+  "name": "chat-ai-server",
+  "version": "0.0.1",
+  "description": "Chat AI Server API",
+  "productName": "Chat AI Server API",
+  "author": "nuno.souza.araujo@gmail.com",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "swagger-autogen": "node swagger.js",
+    "dev": "nodemon server.js",
+    "client": "npm run --prefix .. dev",
+    "serve": "concurrently \"npm run dev\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/helmet": "^11.1.1",
+    "@fastify/static": "^7.0.4",
+    "axios": "^1.7.4",
+    "chat-ai-client": "file:..",
+    "chat-ai-server": "file:",
+    "concurrently": "^8.2.2",
+    "exifreader": "^4.23.3",
+    "fastify": "^4.28.1",
+    "pino": "^9.3.2",
+    "pino-pretty": "^11.2.2",
+    "qs": "^6.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "swagger-autogen": "^2.23.7"
+  }
+}
